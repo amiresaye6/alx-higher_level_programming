@@ -7,4 +7,3 @@ for out in range(10):
             print("{:d}{:d}".format(out, inr))
             break
         print("{:d}{:d}".format(out, inr), end=", ")
-
