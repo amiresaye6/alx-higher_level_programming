@@ -4,7 +4,7 @@ for out in range(10):
         if out == inr:
             continue
         if inr == 9 and out == 8:
-            print(f"{out}{inr}")
+            print("{:d}{:d}".format(out, inr))
             break
-        print(f"{out}{inr}, ", end="")
+        print("{:d}{:d}".format(out, inr), end=", ")
 
