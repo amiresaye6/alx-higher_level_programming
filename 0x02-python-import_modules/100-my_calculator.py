@@ -19,6 +19,6 @@ if __name__ == "__main__":
     elif operator == "/":
         result = div(a, b)
     else:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     print("{} {} {} = {}".format(a, operator, b, result))
