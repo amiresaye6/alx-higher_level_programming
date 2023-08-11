@@ -11,13 +11,13 @@ if __name__ == "__main__":
     b = int(argv[1])
     result = 0
     if operator == "+":
-        result = a + b
+        result = add(a, b)
     elif operator == "-":
-        result = a - b
+        result = sub(a, b)
     elif operator == "*":
-        result = a * b
+        result = mul(a, b)
     elif operator == "/":
-        result = a / b
+        result = div(a, b)
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
