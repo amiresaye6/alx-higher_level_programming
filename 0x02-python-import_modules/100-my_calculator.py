@@ -8,7 +8,7 @@ if __name__ == "__main__":
         exit(1)
     operator = argv[2]
     a = int(argv[1])
-    b = int(argv[1])
+    b = int(argv[3])
     result = 0
     if operator == "+":
         result = add(a, b)
