@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "debuging and addig pstr & pchar"
+git commit -m "finishing 150% of the task"
 git push
