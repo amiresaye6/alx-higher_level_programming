@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "init commit"
+git commit -m "finished mandatory"
 git push
