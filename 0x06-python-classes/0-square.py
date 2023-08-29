@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""
+this is square class
+"""
 class Square:
+    """an empity class with no attreputs"""
     pass
-my_square = Square()
-print(type(my_square))
-print(my_square.__dict__)
