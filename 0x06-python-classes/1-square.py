@@ -3,6 +3,7 @@
 this is square class
 """
 
+
 class Square:
     """
     square class
