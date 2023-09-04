@@ -13,28 +13,28 @@ def matrix_divided(matrix, div):
     Returns: new matrics with all values devided by div
     """
 
-    l1 = len(matrix)
     l2 = len(matrix[0])
-    r = 0
-    c = 0
-
+    err_massage = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
 
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(err_massage)
 
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(err_massage)
+
         elif len(row) != l2:
-            raise TypeError("Each row of the matrix must have the same size")
+            raise TypeError(
+                "Each row of the matrix must have the same size"
+                )
 
         for item in row:
             if not isinstance(item, int) and not isinstance(item, float):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-            
+                raise TypeError(err_massage)
+
     new_matrics = [[round(item / div, 2) for item in row] for row in matrix]
     return new_matrics
