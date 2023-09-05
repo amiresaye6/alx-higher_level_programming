@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "testing solution"
+git commit -m "first solution"
 git push
