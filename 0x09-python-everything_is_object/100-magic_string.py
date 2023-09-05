@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-a = (1)
-b = (1)
-a is b
+def magic_string(output=[]):
+    output += ["BestSchool"]
+    return (", ".join(output))

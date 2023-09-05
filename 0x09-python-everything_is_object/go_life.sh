@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "corrections"
+git commit -m "advansed sol_1"
 git push
