@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-this module is the third version of the class Rectangle
+this module is the fourth version of the class Rectangle
 """
 
 
@@ -10,10 +10,13 @@ class Rectangle():
     simple Rectangle class
     """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -52,3 +55,23 @@ class Rectangle():
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """returns the rectangle as a string of '#' """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        output = ""
+        for _ in range(self.__height):
+            output += "#" * self.__width
+            if _ < self.__height - 1:
+                output += "\n"
+        return output
+
+    def __repr__(self):
+        """returns string representation of Rectange"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """runs before the destruction of the opgect"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1

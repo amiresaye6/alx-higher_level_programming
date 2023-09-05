@@ -62,4 +62,4 @@ class Rectangle():
             output += "#" * self.__width
             if _ < self.__height - 1:
                 output += "\n"
-        return output 
+        return output
