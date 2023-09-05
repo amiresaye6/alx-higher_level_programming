@@ -1,0 +1,21 @@
+testing '101-lazy_matrix_mul' module
+function 'matrix_mul'
+
+==================================
+import the module
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+
+testingt function documentation:
+    >>> lN = lazy_matrix_mul.__doc__
+    >>> len(lN) > 1
+    True
+
+==================================
+
+
+testing without arguments
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
