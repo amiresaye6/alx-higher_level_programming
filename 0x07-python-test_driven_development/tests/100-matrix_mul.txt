@@ -1,0 +1,28 @@
+testing '100-matrix_mul' module
+function 'matrix_mul'
+
+==================================
+import the module
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+testingt module documentation:
+    >>> l = __import__('100-matrix_mul').__doc__
+    >>> len(l) > 1
+    True
+
+testingt function documentation:
+    >>> lN = matrix_mul.__doc__
+    >>> len(lN) > 1
+    True
+
+==================================
+
+testing with valid input
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+testing without arguments
+    >>> matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
