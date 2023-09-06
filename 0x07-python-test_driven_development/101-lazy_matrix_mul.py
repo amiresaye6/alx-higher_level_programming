@@ -1,4 +1,4 @@
-#!/usr/bin/pytone3
+#!/usr/bin/pythone3
 import numpy as np
 """the same as before but with numpy"""
 
