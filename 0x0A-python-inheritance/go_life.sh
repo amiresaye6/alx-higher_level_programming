@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "finally"
+git commit -m "first solution"
 git push

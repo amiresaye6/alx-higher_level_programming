@@ -24,7 +24,7 @@ Welcome to the Urban Design Podcast, where we explore the fascinating world of u
 
 ## Contact Us 📬
 
-Have a question or a topic suggestion? Reach out to us at [email@example.com](mailto:email@example.com) or on [Twitter](https://twitter.com/UrbanDesignPod). We'd love to hear from you! 📣
+Have a question or a topic suggestion? Reach out to us at [amyralsyd367@gmail.com](mailto:amyralsyd367@gmail.com). We'd love to hear from you! 📣
 
 ---
 

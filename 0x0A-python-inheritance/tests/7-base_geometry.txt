@@ -1,0 +1,45 @@
+testing 1-my_list module
+testing MyList class
+testing print_sorted function
+
+===============================
+importing the module and the class
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> base = BaseGeometry()
+
+chicking for documentation
+	>>> l = __import__("7-base_geometry").__doc__
+	>>> len(l) > 1
+	True
+
+	>>> l = base.__doc__
+	>>> len(l) > 1
+	True
+
+	>>> l = base.area.__doc__
+	>>> len(l) > 1
+	True
+
+	>>> l = base.integer_validator.__doc__
+	>>> len(l) > 1
+	True
+
+========================================
+checking functionality
+
+    >>> print(base.area())
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+    >>> print(base.integer_validator("amir", -5))
+    Traceback (most recent call last):
+    ...
+    ValueError: amir must be greater than 0
+
+    >>> print(base.integer_validator("amir", 0))
+    Traceback (most recent call last):
+    ...
+    ValueError: amir must be greater than 0
+
+    >>> base.integer_validator("amir", 501)
