@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Student class v 3
+talking about nonsenc
 """
 
 
