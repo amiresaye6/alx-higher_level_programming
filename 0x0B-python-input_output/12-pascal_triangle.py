@@ -13,4 +13,3 @@ def pascal_triangle(n):
     triangle_res = []
     if n <= 0:
         return triangle_res
-    
