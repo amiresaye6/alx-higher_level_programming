@@ -5,6 +5,8 @@ The goal of it is to manage id attribute in all your future classes
 and to avoid duplicating the same code (by extension, same bugs)
 """
 import json
+import csv
+import turtle
 
 
 class Base():
@@ -60,7 +62,6 @@ class Base():
         returns the list of the JSON string representation json_string
         Args:
             json_string (str): a string representing a list of dictionaries
-            
         """
 
         if json_string is None or json_string == "":
@@ -99,5 +100,15 @@ class Base():
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """
-        
+        serializes in CSV:
+        Args:
+            list_objs (list): list of objs to but in csv file
         """
+        file_name = cls.__name__ + ".csv"
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserializes in CSV:
+        """
+        file_name = cls.__name__ + ".csv"
