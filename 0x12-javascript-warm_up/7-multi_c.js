@@ -1,16 +1,11 @@
 #!/usr/bin/node
-
-const args = process.argv.slice(2);
-const maxNum = parseInt(args[0]);
-
-if (args.length > 0) {
-  if (!isNaN(maxNum)) {
-    for (let i = 0; i < maxNum; i++) {
-      console.log('C is fun');
-    }
-  } else {
+if (process.argv[2] === undefined || isNaN(process.argv[2])) {
     console.log('Missing number of occurrences');
+  } else {
+    const x = Number(process.argv[2]);
+    let i = 0;
+    while (i < x) {
+      console.log('C is fun');
+      i++;
+    }
   }
-} else {
-  console.log('Missing number of occurrences');
-}

@@ -1,15 +1,12 @@
 #!/usr/bin/node
-
-const args = process.argv.slice(2);
-let number = parseInt(args[0]);
-let res = 1;
-
-if (!isNaN(number)) {
-  while (number > 0) {
-    res *= number;
-    number--;
+function factorial (n) {
+    if (n < 0) {
+      return (-1);
+    }
+    if (n === 0 || isNaN(n)) {
+      return (1);
+    }
+    return (n * factorial(n - 1));
   }
-  console.log(res);
-} else {
-  console.log(1);
-}
+  
+  console.log(factorial(Number(process.argv[2])));
