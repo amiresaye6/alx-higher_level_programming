@@ -2,5 +2,5 @@
 
 
 git add .
-git commit -m "tasks 6 -> 10"
+git commit -m "debug"
 git push
