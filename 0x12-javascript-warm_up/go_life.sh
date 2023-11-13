@@ -2,5 +2,5 @@
 
 
 git add .
-git commit -m "init for mandatory"
+git commit -m "tasks 1 -> 5"
 git push
