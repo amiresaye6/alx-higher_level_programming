@@ -6,11 +6,5 @@ class Rectangle {
       this.height = h;
     }
   }
-
-  print () {
-    console.log('hi there');
-  }
 }
 module.exports = Rectangle;
-const rec = new Rectangle(2, 2);
-rec.print();
