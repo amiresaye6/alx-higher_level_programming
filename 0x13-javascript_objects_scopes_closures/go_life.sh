@@ -4,5 +4,5 @@ semistandard --fix *.js
 chmod u+x *.js
 
 git add .
-git commit -m "task 3"
+git commit -m "debug and style"
 git push
