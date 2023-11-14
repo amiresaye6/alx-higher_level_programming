@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-# // change mode to executable
-chmod +x *.js
-
-# // checkign the styling of the code
 semistandard --fix *.js
+chmod u+x *.js
+pystypycodestyle *.py
+betty *.c
 
-# // adding, commiting, and pushing to github.
 git add .
-git commit -m "inint commit"
+git commit -m "debug"
 git push
