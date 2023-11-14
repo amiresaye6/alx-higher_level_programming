@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const Square_old = require('./5-square');
+const SquareOld = require('./5-square');
 
-class Square extends Square_old {
+class Square extends SquareOld {
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
