@@ -22,4 +22,4 @@ if __name__ == '__main__':
             val = resp.read()
             print(val.decode("UTF-8"))
     except HTTPError as e:
-        print("Error code: ".format(e.code))
+        print("Error code:".format(e.code))

@@ -16,10 +16,10 @@ if __name__ == '__main__':
     from urllib import request, parse
     from sys import argv
 
-    params = {"email": "" + argv[2]}
+    params = {"email": argv[2]}
     queriedstring = parse.urlencode(params).encode("ascii")
 
-    url = argv[1] + "?" + queriedstring
+    url = request.Request(argv[1], queriedstring)
 
     with request.urlopen(url) as resp:
         val = resp.read().decode("UTF-8")
