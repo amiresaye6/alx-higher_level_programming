@@ -13,13 +13,11 @@ You must use the with statement
 
 
 if __name__ == '__main__':
-    from urllib.error import HTTPError
-    from urllib import request
-    from sys import argv
+    import sys
+    from urllib import request, error
 
     try:
-        with request.urlopen(argv[1]) as resp:
-            val = resp.read()
-            print(val.decode("UTF-8"))
-    except HTTPError as e:
-        print("Error code:".format(e.code))
+        with request.urlopen(sys.argv[1]) as resp:
+            print(resp.read().decode("UTF-8"))
+    except error.HTTPError as e:
+        print("Error code:", e.code)
