@@ -14,6 +14,5 @@ if __name__ == '__main__':
     from sys import argv
     import requests
 
-    response = requests.get(argv[1])
-    resp_dict = response.headers
-    print(resp_dict['X-Request-Id'])
+    resp = requests.get(argv[1])
+    print(resp.headers.get("X-Request-Id"))
