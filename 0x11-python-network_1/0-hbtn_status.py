@@ -13,11 +13,10 @@ You must use a with statement
 
 if __name__ == '__main__':
     from urllib import request
-    with request.urlopen(" https://alx-intranet.hbtn.io/status") as resp:
+    with request.urlopen("https://alx-intranet.hbtn.io/status") as resp:
         val = resp.read()
-        encoded_val = val.decode("utf-8")
+        encoded_val = val.decode("UTF-8")
         print("Body response:")
-        print("\t- ".format(type(val)))
-        print("\t- ".format(val))
-        print("\t- ".format(encoded_val))
-
+        print("\t- type: {}".format(type(val)))
+        print("\t- content: {}".format(val))
+        print("\t- utf8 content: {}".format(encoded_val))
