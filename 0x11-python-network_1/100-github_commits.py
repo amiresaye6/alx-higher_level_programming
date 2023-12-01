@@ -22,8 +22,11 @@ if __name__ == "__main__":
     resp = requests.get(url)
     resp_json = resp.json()
 
-    for i in range(10):
-        print("{}: {}".format(
-            resp_json[i].get("sha"),
-            resp_json[i].get("commit").get("author").get("name")
-            ))
+    try:
+        for i in range(10):
+            print("{}: {}".format(
+                resp_json[i].get("sha"),
+                resp_json[i].get("commit").get("author").get("name")
+                ))
+    except IndexError:
+        pass
