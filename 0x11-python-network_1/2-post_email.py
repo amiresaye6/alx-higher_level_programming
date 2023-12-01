@@ -17,7 +17,7 @@ if __name__ == '__main__':
     from sys import argv
 
     params = {"email": "" + argv[2]}
-    queriedstring = parse.urlencode(params)
+    queriedstring = parse.urlencode(params).encode("ascii")
 
     url = argv[1] + "?" + queriedstring
 
