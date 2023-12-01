@@ -15,22 +15,20 @@ http://0.0.0.0:5000/search_user with the letter as a parameter.
 """
 
 
-if __name__ == '__main__':
-    from sys import argv
-    import requests
-    url = "http://0.0.0.0:5000/search_user"
+import sys
+import requests
 
-    if (len(argv) == 1):
-        resp = requests.post(url, params={"q": ""})
 
-    else:
-        resp = requests.post(url, params={"q": argv[1]})
+if __name__ == "__main__":
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
 
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        resp_json = resp.json()
-        if resp_json == {}:
+        response = r.json()
+        if response == {}:
             print("No result")
         else:
-            print("[{}] {}".format(resp_json.get("id"), resp_json.get("name")))
+            print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
         print("Not a valid JSON")
